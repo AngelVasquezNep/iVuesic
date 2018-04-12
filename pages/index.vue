@@ -45,9 +45,10 @@ export default {
   margin: 5px
   transition: all .1s
   outline: none
+  background-color: #fff
   &:hover 
-    background-color: #526488
-    color: #fff
+    color: #fff;
+    background-color: #42E0C3
   &:active
     transform: scale(.95)
 

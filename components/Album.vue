@@ -1,11 +1,11 @@
 <template lang="pug">
-  .Albums(v-if="track.preview_url")
+  .Albums(v-if="track.preview_url", :class="{'active' : track.id === $store.state.selectedTrack.id }")
     .play
       img(:src="track.album.images[0].url")
     .description
       p.title {{ track.name }}
       button.btn(@click="selectedTrack") 🎧
-      button.btn 🌎
+      //- button.btn 🌎
 </template>
 
 <script>
@@ -36,11 +36,15 @@
       }
     }
     .btn {
-      padding: 5px;
+      padding: 10px 30px;
     }
     .title {
       margin: 5px;
       margin-top: 10px
     }
+  }
+
+  .active {
+    box-shadow: 0 0 4px 6px #42E0C3;
   }
 </style>

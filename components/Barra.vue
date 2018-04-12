@@ -2,15 +2,14 @@
   .barra.center
     img(src="~/assets/logo.png")
     .secciones
-      h3 Sección 1
-      p Elemento 1
-      p Elemento 2
-      p Elemento 3
+      h2 Title: {{ $store.state.selectedTrack.name || 'Descubre' }} 
+      h3 Artistas: 
+      p(v-if="$store.state.selectedTrack.name", v-for="artist in $store.state.selectedTrack.artists") {{ artist.name }}
     .secciones
-      h3 Sección 2
-      p Elemento 1
-      p Elemento 2
-      p Elemento 3
+      h3 Popularidad
+      p {{ $store.state.selectedTrack.popularity || 0}} / 100
+    //- .secciones
+    //-   .popularity
 </template>
 
 <script>
@@ -21,12 +20,25 @@
 
 <style lang="scss" scoped>
   .barra {
-    align-items: flex-start;
+    // align-items: flex-start;
     box-shadow: 1px -3px 1px 1px #a7a5a5;
     justify-content: inherit;
-      img {
-        margin: 10px auto;
-        width: 90%;
+
+    img {
+      margin: 10px auto;
+      width: 90%;
+      animation: bailar infinite 2s;
+      @keyframes bailar {
+        50% {
+          transform: translateY(-5px)
+        }
       }
+    }
+
+    .popularity {
+      border: 1px solid red;
+      height: 100px;
+    }
+
   }
 </style>

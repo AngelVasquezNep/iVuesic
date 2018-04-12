@@ -6,7 +6,7 @@
       .play
         img( :src="selectedTrack.album.images[0].url")
       .detail
-        h2 {{ selectedTrack.name }}
+        h2 Title: {{ selectedTrack.name }}
         p 
           strong Artista(s): 
           | 
@@ -18,9 +18,6 @@
           strong Album: 
           | {{ selectedTrack.album.name }}
         
-        .botones-accion
-          button.btn 🎧
-          button.btn 🌎
 </template>
 
 <script>
@@ -62,10 +59,6 @@ import { mapState } from 'vuex'
     }
     .detail > * {
       margin: 4px
-    }
-
-    .btn {
-      background-color: #fff;
     }
 
   }
