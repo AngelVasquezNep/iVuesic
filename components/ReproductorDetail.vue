@@ -38,7 +38,8 @@ import { mapState } from 'vuex'
     align-items: center;
     box-shadow: 0 0 1px 1px #a7a7a7;
     transition: .3 all linear;
-    
+    margin: 10px;
+
     @media screen and (max-width: 1100px) {
       grid-template-columns: 200px 1fr;
     }

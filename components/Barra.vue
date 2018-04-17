@@ -1,6 +1,6 @@
 <template lang="pug">
   .barra.center
-    img(src="~/assets/logo.png")
+    img.logo(src="~/assets/logo.png")
     .secciones
       h2 Title: {{ $store.state.selectedTrack.name || 'Descubre' }} 
       h3 Artistas: 
@@ -8,6 +8,9 @@
     .secciones
       h3 Popularidad
       p {{ $store.state.selectedTrack.popularity || 0}} / 100
+    .albumSelected(v-if="$store.state.selectedTrack && $store.state.selectedTrack.album")
+      img(:src="$store.state.selectedTrack.album.images[0].url")
+
     //- .secciones
     //-   .popularity
 </template>
@@ -23,8 +26,8 @@
     // align-items: flex-start;
     box-shadow: 1px -3px 1px 1px #a7a5a5;
     justify-content: inherit;
-
-    img {
+    overflow: hidden;
+    .logo {
       margin: 10px auto;
       width: 90%;
       animation: bailar infinite 2s;
@@ -33,6 +36,10 @@
           transform: translateY(-5px)
         }
       }
+    }
+
+    img {
+      width: 90%;
     }
 
     .popularity {

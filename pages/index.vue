@@ -28,7 +28,7 @@ export default {
   text-align: center
 
 .index-container
-  margin: 10px
+  // margin: 10px
   align-items: initial
   grid-gap: 5px
   display: grid
