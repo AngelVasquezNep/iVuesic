@@ -1,5 +1,5 @@
 <template lang="pug">
-  form.Buscador( @submit.prevent="submit")
+  form.buscador( @submit.prevent="submit")
     
     input(type="search", 
           v-model="busqueda",
@@ -32,8 +32,9 @@ export default {
 </script>
 
 <style lang="sass">
-  .Buscador
+  .buscador
     display: grid
+    margin: 10px
     grid-template-columns: 1fr auto
     grid-gap: 10px
     justify-content: inherit

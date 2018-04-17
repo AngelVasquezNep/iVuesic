@@ -4,6 +4,12 @@
     audio(v-else,:src="$store.state.selectedTrack.preview_url", controls, autoplay)
 </template>
 
+<script>
+  export default {
+    name: 'Reproductor'
+  }
+</script>
+
 <style lang="scss" scoped>
   .reproductor {
     box-shadow: 0 0 5px 2px #a7a5a5;

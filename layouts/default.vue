@@ -1,6 +1,7 @@
 <template lang="pug">
   .nuxt-container
     Barra.Barra
+    Buscador.Buscador
     nuxt.Nuxt
     Reproductor.Reproductor
 </template>
@@ -8,10 +9,11 @@
 <script>
 import Barra from '~/components/Barra.vue'
 import Reproductor from '~/components/Reproductor.vue'
+import Buscador from '~/components/Buscador.vue'
 
   export default {
     name: 'nuxt-container',
-    components: { Barra , Reproductor }
+    components: { Barra , Reproductor, Buscador }
   }
 </script>
 
@@ -32,15 +34,19 @@ body {
 
 
 .nuxt-container {
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
-  grid-template-areas: ' barra nuxt' ' reproductor reproductor ';
-  grid-template-rows: 1fr 75px;
+  grid-template-areas: ' barra buscador' ' barra nuxt' ' reproductor reproductor ';
+  grid-template-rows: auto 1fr auto;
   grid-template-columns: 200px 1fr;
 }
 
 .Nuxt {
    grid-area: nuxt;
+}
+
+.Buscador {
+   grid-area: buscador;
 }
 
 .Barra {

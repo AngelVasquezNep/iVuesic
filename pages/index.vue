@@ -1,6 +1,5 @@
 <template lang="pug">
   section.index-container.center
-    Buscador
     ReproductorDetail
     Albums
 </template>
@@ -8,12 +7,11 @@
 <script>
 import ReproductorDetail from '~/components/ReproductorDetail.vue'
 import Albums from '~/components/Albums.vue'
-import Buscador from '~/components/Buscador.vue'
 import Spinner from '~/components/Spinner.vue'
 
 export default {
   name: 'Index',
-  components: { ReproductorDetail, Albums, Buscador, Spinner },
+  components: { ReproductorDetail, Albums, Spinner },
   data () {
     return {
 
@@ -34,8 +32,9 @@ export default {
   align-items: initial
   grid-gap: 5px
   display: grid
-  grid-template-rows: 37px auto 300px 
+  // grid-template-rows: auto 300px 
   justify-content: inherit;
+  overflow-y: scroll
 
 .btn
   text-decoration: none

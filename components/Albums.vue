@@ -22,7 +22,7 @@ export default {
 
 <style lang="sass" scoped>
 .albums 
-  overflow-y: scroll
+  // overflow-y: scroll
   span
     display: flex
     flex-wrap: wrap
