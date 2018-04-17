@@ -12,9 +12,9 @@ import Spinner from '~/components/Spinner.vue'
 export default {
   name: 'Index',
   components: { ReproductorDetail, Albums, Spinner },
-  data () {
+  head () {
     return {
-
+      title: this.$store.state.selectedTrack.name ? this.$store.state.selectedTrack.name : 'iVuesic'
     }
   }
 }
