@@ -48,6 +48,7 @@ export default {
   &:hover 
     color: #fff;
     background-color: #42E0C3
+    cursor: pointer
   &:active
     transform: scale(.95)
 

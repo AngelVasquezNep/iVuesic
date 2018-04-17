@@ -2,7 +2,7 @@
   .ReproductorDetail
     span.mensaje(v-if="!selectedTrack.album")
       h2 Escucha las canciones más importantes del momento
-    span.detalles(v-if="selectedTrack.album")
+    span.detalles(v-if="selectedTrack.album", :style="{ backgroundImage: 'url(' + selectedTrack.album.images[0].url + ')' }")
       .play
         img( :src="selectedTrack.album.images[0].url")
       .detail
@@ -55,8 +55,14 @@ import { mapState } from 'vuex'
     }
 
     .detail {
-      text-align: start;
-      margin: 10px;
+      height: 100%;
+      background: rgba(0,0,0,.6);
+      color: #fff;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 30px;
     }
     .detail > * {
       margin: 4px
@@ -67,6 +73,11 @@ import { mapState } from 'vuex'
 .ReproductorDetail{
     display: grid;
     align-items: center;
+
+    .detalles {
+      background-position: center;
+      background-size: cover;
+    }
 
     .mensaje {
       font-size: 2em;
