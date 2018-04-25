@@ -33,6 +33,9 @@ export default {
 
   .spinner
     width: 100%
+  @media screen and (max-width: 775px) 
+    h2
+      font-size: 3em
 
 
 </style>

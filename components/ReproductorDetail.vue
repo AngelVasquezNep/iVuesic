@@ -43,6 +43,9 @@ import { mapState } from 'vuex'
     @media screen and (max-width: 1100px) {
       grid-template-columns: 200px 1fr;
     }
+    @media screen and (max-width: 544px) {
+      grid-template-columns: 1fr;
+    }
 
     .play {
       box-shadow: 0 0 1px 1px #a7a7a7;
@@ -81,6 +84,16 @@ import { mapState } from 'vuex'
 
     .mensaje {
       font-size: 2em;
+    }
+    @media screen and (max-width: 775px) {
+      .mensaje {
+        font-size: 1em;
+      }
+    }
+    @media screen and (max-width: 544px) {
+      .play {
+        display: none !important;
+      }
     }
 }
 

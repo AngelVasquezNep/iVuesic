@@ -48,4 +48,11 @@
     }
 
   }
+
+  @media screen and (max-width: 768px){
+    .secciones , .albumSelected {
+      display: none;
+    }
+  }
+
 </style>
