@@ -53,6 +53,9 @@
     .secciones , .albumSelected {
       display: none;
     }
+    .logo {
+      margin: 0 auto !important;
+    }
   }
 
 </style>
