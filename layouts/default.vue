@@ -60,6 +60,7 @@ body {
 @media screen and (max-width: 768px) {
   .nuxt-container {
     grid-template-areas: ' barra buscador' ' nuxt nuxt' ' reproductor reproductor ';
+    grid-template-columns: 30% 1fr;
   }
 }
 
