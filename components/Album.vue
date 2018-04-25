@@ -27,11 +27,11 @@
     box-shadow: 0 0 1px 1px #a7a7a7;
     margin: 10px;
     .play {
-      box-shadow: 0 0 1px 1px #a7a7a7;
       height: 100%;
       display: grid;
-      align-items: center;
+      // align-items: center;
       img {
+        box-shadow: 0 0 1px 1px #a7a7a7;
         width: 100%;
       }
     }
