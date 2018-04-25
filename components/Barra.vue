@@ -50,6 +50,9 @@
   }
 
   @media screen and (max-width: 768px){
+    .barra {
+      box-shadow: none;
+    }
     .secciones , .albumSelected {
       display: none;
     }

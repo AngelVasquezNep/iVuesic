@@ -91,6 +91,11 @@ import { mapState } from 'vuex'
       }
     }
     @media screen and (max-width: 544px) {
+      min-height: 250px;
+      margin-top: 10px;
+      .detalles {
+        height: 100%;
+      }
       .play {
         display: none !important;
       }
